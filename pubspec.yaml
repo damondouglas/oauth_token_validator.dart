@@ -1,0 +1,7 @@
+name: oauth_token_validator
+description: Validates tokens generated from Google OAuth.
+dev_dependencies:
+  test: '>=0.12.15+1 <0.13.0'
+  googleapis_auth: '>=0.2.3+4 <0.3.0'
+dependencies:
+  http: '>=0.11.3+9 <0.12.0'
