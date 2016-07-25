@@ -26,7 +26,7 @@ import 'package:oauth_token_validator/<console OR browser>.dart';
 
 ...
 String tokenData = "ya29..." // Extracted from: Authorization: Bearer y29...
-TokenInfo info = validate()
+TokenInfo info = validate(tokenData);
 ```
 
 # Where To Acquire Token Data
