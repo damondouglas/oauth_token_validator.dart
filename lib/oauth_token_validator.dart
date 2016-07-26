@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 
 final BASE_URL = "https://www.googleapis.com/oauth2/v3/tokeninfo";
 
+/// returns [TokenInfo] acquired from googleapis.com from the [tokenData].
 Future<TokenInfo> validate(String tokenData) => new Future(() async {
   var config = new Config(tokenData);
   var response = await http.get(config.uri.toString(), headers: {
@@ -17,12 +18,14 @@ Future<TokenInfo> validate(String tokenData) => new Future(() async {
   return info;
 });
 
+/// Builds a Uri based on [tokenData].
 class Config {
   String tokenData;
   Config(this.tokenData);
   Uri get uri => Uri.parse("$BASE_URL?access_token=$tokenData");
 }
 
+/// Stores data about the authentication.
 class TokenInfo {
   String clientId;
   List<String> scope;
