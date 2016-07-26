@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="made with love by dartdoc 0.9.0">
+  <meta name="description" content="oauth_token_validator API docs, for the Dart programming language.">
+  <title>oauth_token_validator - Dart API docs</title>
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li class="self-crumb">oauth_token_validator</li>
+          </ol>
+          <div class="self-name">oauth_token_validator</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">package</span> oauth_token_validator
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="index.html#libraries">Libraries</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5>oauth_token_validator</h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
+      <li><a href="oauth_token_validator/oauth_token_validator-library.html">oauth_token_validator</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+      <section class="desc markdown">
+        <h1>oauth_token_validator</h1>
+<h1>About</h1>
+<p>Validates tokens generated from Google OAuth.</p>
+<h1>Install</h1>
+<pre class="yaml prettyprint"><code>dependencies:
+  oauth_token_validator:
+    git: git@github.com:damondouglas/oauth_token_validator.dart.git
+</code></pre>
+<p>OR</p>
+<pre class="bash prettyprint"><code>$ den install -s git oauth_token_validator=git@github.com:damondouglas/oauth_token_validator.dart.git
+</code></pre>
+<h1>Usage</h1>
+<pre class="dart prettyprint"><code>import 'package:oauth_token_validator/&lt;console OR browser&gt;.dart';
+
+...
+String tokenData = "ya29..." // Extracted from: Authorization: Bearer y29...
+TokenInfo info = validate(tokenData);
+</code></pre>
+<h1>Where To Acquire Token Data</h1>
+<h2>google_oauth2_client</h2>
+<p>If using <a href="https://pub.dartlang.org/packages/google_oauth2_client">google_oauth2_client</a>:</p>
+<pre class="dart prettyprint"><code>String tokenData = token.data; // where token is Token
+</code></pre>
+<h2>googleapis_auth</h2>
+<p>If using <a href="https://pub.dartlang.org/packages/googleapis_auth">googleapis_auth</a>:</p>
+<pre class="dart prettyprint"><code>String tokenData = token.data; // where token is AccessToken
+</code></pre>
+<h2>Http/REST</h2>
+<p>If redirecting to Google's OAuth 2.0 Server (see <a href="https://developers.google.com/identity/protocols/OAuth2WebServer">Google Identity Platform</a>):</p>
+<pre class="dart prettyprint"><code>
+var response = JSON.decode(data);
+var tokenData = response['access_token'];
+</code></pre>
+<h1>More Information</h1>
+<p>See <a href="https://developers.google.com/oauthplayground/">OAuth 2.0 Playground</a> for more information.</p>
+      </section>
+      
+    <section class="summary" id="libraries">
+      <h2>Libraries</h2>
+      <dl>
+          <dt id="oauth_token_validator">
+            <span class="name"><a href="oauth_token_validator/oauth_token_validator-library.html">oauth_token_validator</a></span>
+          </dt>
+          <dd>
+          </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+
+  </div><!--/.sidebar-offcanvas-right-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          oauth_token_validator 
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>
